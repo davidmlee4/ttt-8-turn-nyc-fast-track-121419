@@ -20,4 +20,5 @@ def valid_move?(board, index)
     return true
   elsif !index.between?(0,8)
     return false
+  end
 end
