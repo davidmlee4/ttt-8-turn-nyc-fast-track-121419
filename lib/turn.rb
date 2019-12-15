@@ -15,14 +15,21 @@ def move(board, input_to_index, character = "X")
   return board
 end
 
-def valid_move?(board, index)
+ddef valid_move?(board, index)
   if index.between?(0,8)
-    return true
-  elsif !index.between?(0,8)
+    if board[index] == "X" || board[index] == "O"
+      return false
+    elsif board[index] == " " || board [index] == ""
+      return true
+    else
+      return true
+  else
     return false
   end
 end
 
 def turn(board)
   puts "Please enter 1-9:"
+  num = gets.chomp
+  if valid_move
 end
